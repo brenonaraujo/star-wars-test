@@ -6,12 +6,13 @@
         <p><strong>{{people.name}}</strong></p>
       </li>
     </ul>
-    <button type="submit" v-on:click="nextPage" >Next</button>
+    <button type="submit" :disabled="isValid" v-on:click="page(-1)" >Previous</button>
+    <button type="submit" v-on:click="page(1)" >Next</button>
   </div>
 </template>
 
 <script>
-import { getPeoples, getNextPeoples } from '../services'
+import { getPage, getPeoples } from '../services'
 
 export default {
   data: () => ({
@@ -21,20 +22,32 @@ export default {
   }),
   created () {
     getPeoples().then(data => {
-      console.log(data)
       this.next = data.next
       this.previous = data.previous
       this.peoples = data.results
     })
   },
   methods: {
-    nextPage: function (event) {
-      console.log(this.next)
-      getNextPeoples(this.next).then(data => {
+    page: function (arrow) {
+      let np;
+      if(arrow < 0)
+        np = this.previous
+        else
+        np = this.next
+
+      getPage(np).then(data => {
         this.peoples = data.results
         this.next = data.next
         this.previous = data.previous
       })
+    }
+  },
+  computed: {
+    isValid () {
+      if(this.previous === null)
+        return true
+      else
+        return false
     }
   }
 }
