@@ -16,7 +16,11 @@
               <a>Vehicles</a>
           </router-link>
         </div>
-        <div class="column"><a href="#">Starships</a></div>
+        <div class="column">
+          <router-link :to="{ name: 'starships.main'}">
+              <a>Starships</a>
+          </router-link>
+        </div>
         <div class="column"><a href="#">Swapi API</a></div>
       </div>
     </div>
@@ -29,10 +33,15 @@ export default {
 </script>
 <style>
   #header-main {
-    margin-top: 25px
+    margin-top: 1px;
   }
   .row .column a {
     color: rgb(213, 222, 110);
+    font-size: 24px
+  }
+
+  .row .column a:hover {
+    color: rgb(219, 236, 26);
     font-size: 24px
   }
 

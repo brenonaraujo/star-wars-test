@@ -1,9 +1,9 @@
 <template lang="html">
   <div class="bloco">
-    <ul v-if="planets && planets.length">
-      <li v-for="planet of planets">
-           <i class="Large material-icons">language</i>
-        <p><strong>{{planet.name}}</strong></p>
+    <ul v-if="starships && starships.length">
+      <li v-for="starship of starships">
+           <i class="Large material-icons">near_me</i>
+        <p><strong>{{starship.name}}</strong></p>
       </li>
     </ul>
     <button className="btnPrevious" type="submit" :disabled="isValid" v-on:click="page(-1)" >Previous</button>
@@ -12,19 +12,19 @@
 </template>
 
 <script>
-import { getPage, getPlanets } from '../services'
+import { getPage, getStarships } from '../services'
 
 export default {
   data: () => ({
     next: '',
     previous: '',
-    planets : []
+    starships : []
   }),
   created () {
-    getPlanets().then(data => {
+    getStarships().then(data => {
       this.next = data.next
       this.previous = data.previous
-      this.planets = data.results
+      this.starships = data.results
     })
   },
   methods: {
@@ -36,7 +36,7 @@ export default {
         np = this.next
 
       getPage(np).then(data => {
-        this.planets = data.results
+        this.starships = data.results
         this.next = data.next
         this.previous = data.previous
       })

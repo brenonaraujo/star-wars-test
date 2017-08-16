@@ -23,15 +23,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #d0d7df;
-  margin-top: 30px;
+  margin-top: 2px;
 }
 body {
-  background-color: #000
+  background-image: url("./assets/index.png");
 }
 
 #logo {
-  max-width:200px;
-  max-height:150px;
+  max-width: 300px;
+  max-height: 250px;
   width: auto;
   height: auto;
 }

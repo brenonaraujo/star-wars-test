@@ -2,7 +2,7 @@
   <div class="bloco">
     <ul v-if="vehicles && vehicles.length">
       <li v-for="vehicle of vehicles">
-           <i class="Large material-icons">near_me</i>
+           <i class="Large material-icons">directions_car</i>
         <p><strong>{{vehicle.name}}</strong></p>
       </li>
     </ul>
@@ -68,7 +68,7 @@ button {
 }
 .bloco ul li {
   display: inline-block;
-  margin: 10px 5px;
+  margin: 5px 15px;
 }
 
 /* fallback */
@@ -84,7 +84,7 @@ button {
   font-weight: normal;
   color: #dbd553;
   font-style: normal;
-  font-size: 180px;
+  font-size: 950%;
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;
