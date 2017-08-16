@@ -1,21 +1,30 @@
-# star-wars-test
+Bem vindo ao Desafio Star Wars!
+===================
 
-> Star wars test with vue.js
+----------
+teste aqui? - [demonstração](https://star-wars-desafio.firebaseapp.com)
 
-## Build Setup
 
-``` bash
-# install dependencies
-npm install
+Como executar o Projeto
+-------------
 
-# serve with hot reload at localhost:8080
-npm run dev
+Faça o download do repositorio, execute o `npm install` para instalar as dependencias do projeto.
 
-# build for production with minification
-npm run build
+> **Obs:**
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+> - É necessario que se tenha o "npm" instalado na maquina.
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+#### <i class="icon-folder-open"></i> Inicie o servidor
+Execute npm run dev
+
+----------
+
+
+Dependências
+-------------------
+Abaixo as tecnologias que foram utilizadas no projeto:
+
+ - vuejs 2x
+ - Vue-router
+ - Milligram
+ - Swapi API
