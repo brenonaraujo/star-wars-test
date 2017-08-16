@@ -12,7 +12,7 @@ Faça o download do repositorio, execute o `npm install` para instalar as depend
 
 > **Obs:**
 
-> - É necessario que se tenha o "npm" instalado na maquina.
+> - É necessario ter o node e o npm instalado na maquina.
 
 #### <i class="icon-folder-open"></i> Inicie o servidor
 Execute npm run dev
