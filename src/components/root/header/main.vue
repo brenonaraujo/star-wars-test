@@ -1,9 +1,21 @@
 <template lang="html">
     <div id="header-main" class="container">
       <div class="row">
-        <div class="column"><a href="#">Peoples</a></div>
-        <div class="column"><a href="#">Planets</a></div>
-        <div class="column"><a href="#">Veichiles</a></div>
+        <div class="column">
+          <router-link :to="{ name: 'peoples.main'}" >
+              <a>Peoples</a>
+          </router-link>
+        </div>
+        <div class="column">
+          <router-link :to="{ name: 'planets.main'}">
+              <a>Planets</a>
+          </router-link>
+        </div>
+        <div class="column">
+          <router-link :to="{ name: 'vehicles.main'}">
+              <a>Vehicles</a>
+          </router-link>
+        </div>
         <div class="column"><a href="#">Starships</a></div>
         <div class="column"><a href="#">Swapi API</a></div>
       </div>

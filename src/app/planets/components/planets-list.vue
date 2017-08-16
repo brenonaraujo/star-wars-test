@@ -1,9 +1,9 @@
 <template lang="html">
   <div class="bloco">
-    <ul v-if="peoples && peoples.length">
-      <li v-for="people of peoples">
-           <i class="Large material-icons">account_box</i>
-        <p><strong>{{people.name}}</strong></p>
+    <ul v-if="planets && planets.length">
+      <li v-for="planet of planets">
+           <i class="Large material-icons">language</i>
+        <p><strong>{{planet.name}}</strong></p>
       </li>
     </ul>
     <button className="btnPrevious" type="submit" :disabled="isValid" v-on:click="page(-1)" >Previous</button>
@@ -12,19 +12,19 @@
 </template>
 
 <script>
-import { getPage, getPeoples } from '../services'
+import { getPage, getPlanets } from '../services'
 
 export default {
   data: () => ({
     next: '',
     previous: '',
-    peoples : []
+    planets : []
   }),
   created () {
-    getPeoples().then(data => {
+    getPlanets().then(data => {
       this.next = data.next
       this.previous = data.previous
-      this.peoples = data.results
+      this.planets = data.results
     })
   },
   methods: {
@@ -36,7 +36,7 @@ export default {
         np = this.next
 
       getPage(np).then(data => {
-        this.peoples = data.results
+        this.planets = data.results
         this.next = data.next
         this.previous = data.previous
       })

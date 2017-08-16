@@ -1,16 +1,16 @@
 <template lang="html">
   <div class="container">
     <Filters></Filters>
-    <Peoples></Peoples>
+    <Planet></Planet>
   </div>
 </template>
 
 <script>
 import Filters from '@/components/root/filters/filter'
-import Peoples from './peoples-list'
+import Planet from './planets-list'
 
 export default {
-  components: { Filters, Peoples }
+  components: { Filters, Planet }
 }
 
 </script>
