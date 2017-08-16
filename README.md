@@ -2,7 +2,7 @@ Bem vindo ao Desafio Star Wars!
 ===================
 
 ----------
-teste aqui? - [demonstração](https://star-wars-desafio.firebaseapp.com)
+teste aqui? - [demonstração](https://star-wars-test.herokuapp.com/)
 
 
 Como executar o Projeto
