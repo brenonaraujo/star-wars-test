@@ -1,16 +1,22 @@
-<template lang="html">
+<template>
   <div class="container">
     <Filters></Filters>
-    <Peoples></Peoples>
+    <div class="bloco">
+
+    </div>
   </div>
 </template>
 
 <script>
 import Filters from '@/components/root/filters/filter'
-import Peoples from './peoples-list'
 
 export default {
-  components: { Filters, Peoples }
+  components: { Filters },
+  data : () => {
+    url: this.$route.params.url
+  }
 }
-
 </script>
+
+<style scoped="scope">
+</style>
