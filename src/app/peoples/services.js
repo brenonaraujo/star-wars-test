@@ -5,7 +5,7 @@ export const getPeoples = () => {
   .then(response => response.data)
 }
 
-export const getPage = (page) => {
+export const getData = (page) => {
   return http.get(page)
   .then(response => response.data)
 }

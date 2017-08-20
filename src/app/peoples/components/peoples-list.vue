@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { getPage, getPeoples } from '../services'
+import { getData, getPeoples } from '../services'
 import Filters from '@/components/root/filters/filter'
 
 export default {
@@ -42,7 +42,7 @@ export default {
         else
         np = this.next
 
-      getPage(np).then(data => {
+      getData(np).then(data => {
         this.peoples = data.results
         this.next = data.next
         this.previous = data.previous
